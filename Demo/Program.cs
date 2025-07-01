@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections;
+using System.Text;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Demo
 {
-    public class Person : IEnumerable
+    public class Person // : IEnumerable
     {
         public int Id { get; set; }
         public string? Name { get; set; }
 
         ///any somthing want to wark with foreach should have this interfase that have this function
-        public IEnumerator GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
+        //public IEnumerator GetEnumerator()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public override string ToString()
         {
@@ -290,6 +291,7 @@ namespace Demo
             #endregion
 
             #region Control Statments 2. Loop Statments
+
             // for & while => the same in IL 
             // do while more fast than for & While
             // foreach 4 time Slower than for
@@ -340,10 +342,105 @@ namespace Demo
             ///
             #endregion
 
+            #endregion
+
+            #region String
+
+            // String is A Class [Reference Type]: internally is an Array of Chars
+            // String is an Immutable Type [Can't be Changed; an Array of Chars [internally], Array is Fixed-Size]
+
+            #region Example 01
+            //string Name;
+            // Declare for Reference 'Name' of type "String"
+            // This Reference 'Name' is refering to the Default Value of the Reference Types = NULL.
+            // CLR Will Allocate 4 Bytes for Reference 'Name' in STACK
+            // CLR Will Allocate 0 Bytes in HEAP
+
+            //Name = new string("Ahmed");
+            // CLR will Allocate 5 characters * 2 Bytes = 10 Byets
+            // Initialized with "Ahmed"
+            //Name = new("Ahmed"); // start .NET 5 C#9
+            //Name = "Ahmed"; // Speciled in String
+            //Name = "Amany"; // That will allocate new Object don't Change in Value 
+            //
+            //string name01 = "Mena";
+            //string name02 = "Mena";
+            //---------------------Important----------------------------------------------------
+            //when declare 2 string and have the same value, each of them it Will be reference to 
+            //the same address in HEAP not allocate a new address and save them in.
+            //Console.WriteLine(object.ReferenceEquals(name01,name02)); 
+            #endregion
+
+            #region Example 02
+            //string Name01 = "Mena"; // Has 2 References [Name01,Name02]
+            //string Name02 = "Kero";
+
+            //Console.WriteLine($"Name01 {Name01}");
+            //Console.WriteLine($"Name02 {Name02}");
+            //Console.WriteLine("**************************************");
+            //Name02 = Name01;
+
+            //Console.WriteLine($"Name01 {Name01}");
+            //Console.WriteLine($"Name02 {Name02}");
+            //Console.WriteLine("*****************After Change*********************");
+
+            //Name02 = "Hamada";
+            ////Name02 = new string("Hamada"); // in  Oreginal
+            //Console.WriteLine($"Name01 {Name01}");
+            //Console.WriteLine($"Name02 {Name02}");
+            //Console.WriteLine("******************After Change********************"); 
+            #endregion
 
             #endregion
 
+            #region StringBuilder
 
+            // StringBuilder is a Class [Reference Type]
+            // stringBuilder is a Mutable[Not Immutable]  Type [can be Changed; (internally is a Linked-List of Chars) ]
+
+            //StringBuilder messageBuilder = new StringBuilder("Hello");
+
+            //Console.WriteLine($"messageBuilder.GetHashCode(): {messageBuilder.GetHashCode()}");
+            //Console.WriteLine($"messageBuilder.ToString(): {messageBuilder.ToString()}");
+
+            #region Edit Message
+            //Console.Write("Enter your name : ");
+            //string userName = Console.ReadLine()!;
+            //messageBuilder.Append($"\t{userName}");
+            #endregion
+
+            //Console.WriteLine($"messageBuilder.GetHashCode(): {messageBuilder.GetHashCode()}");
+            //Console.WriteLine($"messageBuilder.ToString(): {messageBuilder.ToString()}");
+
+            #endregion
+
+            #region StringBuilder Methods
+            //StringBuilder mb = new StringBuilder("Hi");
+
+            //mb.AppendLine(" Mena");
+            //mb.AppendLine("Erian");
+
+            //mb.AppendFormat("{0} + {1} = {2}", 5, 8, 13);
+
+            //mb.AppendJoin(";", "Mahmoud", "Yassmin");
+
+            //char[] chars = new char[10];
+
+            //mb.CopyTo(0, chars, 5, 2) ;
+
+            //foreach (char c in chars) Console.WriteLine(c);
+
+
+            //mb.Insert(0, "Hello ") ;
+
+            //mb.Remove(6,2);
+
+            ////mb.Clear();
+
+            //mb.Replace("H","$");
+
+            //Console.WriteLine(mb); 
+            #endregion
         }
     }
 }
