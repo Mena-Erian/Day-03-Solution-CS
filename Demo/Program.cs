@@ -1,5 +1,18 @@
-﻿namespace Demo
+﻿using System;
+
+namespace Demo
 {
+    public class Person
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+
+        public override string ToString()
+        {
+            //return $"Id = {Id} , Name = {Name}";
+            return base.ToString();
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -42,33 +55,233 @@
 
             #endregion
 
+            #region Example 02 [Numeric Type: MoreThan, Less Than]
+
+            ///Console.WriteLine("please Enter your age: ");
+            ///int.TryParse(Console.ReadLine(), out int age);
+            ///
+            ///if (age > 20 && age < 25)
+            ///    Console.WriteLine("Your Age is Greater than 20");
+            ///else if (age < 20)
+            ///    Console.WriteLine("Your Age is Less than 20");
+            ///else
+            ///    Console.WriteLine("Your Age Equals 20");
+            ///
+            ///switch (age)
+            ///{
+            ///    case > 20 and < 25:
+            ///        Console.WriteLine("Your Age is Greater than 20");
+            ///        break;
+            ///    case < 20:
+            ///        Console.WriteLine("Your Age is Less than 20");
+            ///        break;
+            ///    default:
+            ///        Console.WriteLine("Your Age Equals 20");
+            ///        break;
+            ///} 
+
             #endregion
-           
-            #region Switch Case is Different in C#
 
-            //Console.WriteLine("please Enter your age: ");
-            //int.TryParse(Console.ReadLine(), out int age);
+            #region Example 03 [String: Equality]
+            //Console.WriteLine("Enter your Name");
+            //string Name = Console.ReadLine() ?? "No Name";
 
-            //if (age > 20 && age < 25)
-            //    Console.WriteLine("Your Age is Greater than 20");
-            //else if (age < 20)
-            //    Console.WriteLine("Your Age is Less than 20");
-            //else
-            //    Console.WriteLine("Your Age Equals 20");
+            ///if (Name == "Ahmed")
+            ///    Console.WriteLine("Hello Ahmed");
+            ///else if (Name == "Mina")
+            ///    Console.WriteLine("Hello Mina");
+            ///else if (Name == "Omar")
+            ///    Console.WriteLine("Hello Omer");
+            ///else if (Name == "Maged")
+            ///    Console.WriteLine("Hello Maged");
+            ///else if (Name == "Aya")
+            ///    Console.WriteLine("Hello Aya");
 
-            //switch (age)
+            //if i make switching of more than 5 strings so use => Switch ,
+            //becouse it will be translate to jumb table (in release Mode) so it will be O(1)
+            //but if i have less than so here the switch it like if statment in this point
+
+            ///switch (Name)
+            ///{
+            ///    case "Ahmed":
+            ///         Console.WriteLine("Hello Ahmed");
+            ///        break;
+            ///    case "Mina":
+            ///         Console.WriteLine("Hello Mina");
+            ///        break;
+            ///    case "Aya":
+            ///        Console.WriteLine("Hello Aya");
+            ///        break;
+            ///    case "Yassmin":
+            ///        Console.WriteLine("Hello Yassmin");
+            ///        break;
+            ///    case "Maged":
+            ///        Console.WriteLine("Hello Maged");
+            ///        break;
+            ///    case "test":
+            ///        Console.WriteLine("Hello test");
+            ///        break;
+            ///} 
+            #endregion
+
+            #region Go To Statmint Best Practice
+            ///Console.WriteLine("Please Enter Your Buget: ");
+            ///   int Budget = int.Parse(Console.ReadLine());
+            ///
+            ///   switch (Budget)
+            ///   {
+            ///       case 3000:
+            ///           Console.WriteLine("Option 03");
+            ///           //Console.WriteLine("Option 02");
+            ///           //Console.WriteLine("Option 01");
+            ///           goto case 2000;
+            ///       case 2000:
+            ///           Console.WriteLine("Option 02");
+            ///           //Console.WriteLine("Option 01");
+            ///           goto case 1000;
+            ///       case 1000:
+            ///           Console.WriteLine("Option 01");
+            ///           break;
+            ///   } 
+            #endregion
+
+            #region Evolution of Switch Case in C# [7.0]
+
+            //object obj = new object();
+            //obj = 10; // Boxing => //like this // new boject(10)
+            //
+            //obj = new Person { Id = 10, Name = "Mena" };
+
+            ///switch(obj)
+            ///{
+            ///    case int X: // UnBoxing => int X = 10;
+            ///        Console.WriteLine("");
+            ///        break;
+            ///}
+
+            //object test = new Person();
+            //
+            //switch (obj)
             //{
-            //    case > 20 and < 25:
-            //        Console.WriteLine("Your Age is Greater than 20");
+            //    //case > 10 and < 20:
+            //    // this checks if localInput is of type int
+            //    case int localInput when localInput > 10 && localInput < 20:
+            //        Console.WriteLine("integer input");
             //        break;
-            //    case < 20:
-            //        Console.WriteLine("Your Age is Less than 20");
+            //    // this checks if localInput is of type double
+            //    case double localInput:
+            //        Console.WriteLine("double input");
+            //        break;
+            //                    // Pattern Matching
+            //    case Person person when person.Id == 10 && person.Name == "Mena":
+            //        Console.WriteLine(person.ToString());
             //        break;
             //    default:
-            //        Console.WriteLine("Your Age Equals 20");
+            //        Console.WriteLine("UnKnown input");
             //        break;
-            //} 
+            //}
+
             #endregion
+
+            #region Evolution of Switch Case in C# [8.0]
+
+            #region Pattern Matching Enhancements
+            ///Person person1 = new Person { Id = 10, Name = "Mena" };
+            ///
+            ///switch (person1)
+            ///{
+            ///    //enhancements in pattern Matching
+            ///    case { Id: > 20, Name: "Mena" }:
+            ///    //case Person person when person.Id > 20 && person.Name == "Mena":
+            ///        Console.WriteLine(person1);
+            ///        break;
+            ///                    // Pattern Matching
+            ///    case Person person when person.Id == 10 && person.Name == "Mena":
+            ///        Console.WriteLine(person.ToString());
+            ///        break;
+            ///    default:
+            ///        Console.WriteLine("UnKnown input");
+            ///        break;
+            ///} 
+
+            #endregion
+
+            #region Switch Expression
+
+            #region Example 01
+            //Console.WriteLine("Enter Your Option: ");
+            //int.TryParse(Console.ReadLine(),out int option);
+
+            ///string message = string.Empty;
+
+            ///switch (option) 
+            ///{
+            ///    case 1:
+            ///        message = "Option 01";
+            ///        break;
+            ///    case 2:
+            ///        message = "Option 02";
+            ///        break;
+            ///    case 3:
+            ///        message = "Option 03";
+            ///        break;
+            ///    default:
+            ///        message = "any";
+            ///        break;
+            ///}
+
+            //Switch Expression
+            ///message = option switch
+            ///{
+            ///    1 => "Option 01",
+            ///    2 => "Option 02",
+            ///    3 => "Option 03",
+            ///    _ => "any"
+            ///}; Console.WriteLine(message);  
+
+            #endregion
+
+            #region Example 02
+            ///Person obj = new Person() { Id = 10, Name = "Mena" };
+            ///
+            ///string message = string.Empty;
+            ///
+            ///message = obj switch
+            ///{
+            ///    { Id: 10, Name: "Mena" } => "Hello any",
+            ///    { Id: 20, Name: "any" } => "Hello any",
+            ///    { Id: 30, Name: "any" } => "Hello any"
+            ///};
+            #endregion
+
+            #endregion
+
+            #endregion
+
+            #region Evolution of Switch Case in C# [9.0]
+
+            #region Pattern Matching Enhancements
+            #region Example 02
+            Person obj = new Person() { Id = 10, Name = "Mena" };
+            
+            string message = string.Empty;
+            
+            message = obj switch
+            {
+                { Id: > 25 and  < 35, Name: "Mena" } => "Hello any",
+                { Id: 20, Name: "any" } => "Hello any",
+                { Id: 30, Name: "any" } => "Hello any"
+            };
+            #endregion
+
+
+            #endregion
+
+            #endregion
+
+            #endregion
+
+
 
         }
     }
