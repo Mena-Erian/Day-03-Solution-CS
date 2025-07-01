@@ -1,11 +1,18 @@
 ﻿using System;
+using System.Collections;
 
 namespace Demo
 {
-    public class Person
+    public class Person : IEnumerable
     {
         public int Id { get; set; }
         public string? Name { get; set; }
+
+        ///any somthing want to wark with foreach should have this interfase that have this function
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
 
         public override string ToString()
         {
@@ -262,25 +269,57 @@ namespace Demo
 
             #region Pattern Matching Enhancements
             #region Example 02
-            Person obj = new Person() { Id = 10, Name = "Mena" };
+            ///Person obj = new Person() { Id = 10, Name = "Mena" };
+            ///
+            ///string message = string.Empty;
+            ///
+            ///message = obj switch
+            ///{
+            ///    { Id: > 25 and  < 35, Name: "Mena" } => "Hello any",
+            ///    { Id: 20, Name: "any" } => "Hello any",
+            ///    { Id: 30, Name: "any" } => "Hello any"
+            ///};
+            #endregion
+
+
+            #endregion
+
+            #endregion
+
+            #endregion
+
+            #region Control Statments 2. Loop Statments
+            // for & while => the same in IL 
+            // do while more fast than for & While
+            // foreach 4 time Slower than for
+
+            #region [for, foreach]
+
+            //int[] Numbers = [ 1, 2, 3, 4, 5];
+
+            //for (int i = 0; i < Numbers.Length; i++)
+            //{
+            //    Console.WriteLine(Numbers[i]);
+            //}
             
-            string message = string.Empty;
-            
-            message = obj switch
-            {
-                { Id: > 25 and  < 35, Name: "Mena" } => "Hello any",
-                { Id: 20, Name: "any" } => "Hello any",
-                { Id: 30, Name: "any" } => "Hello any"
-            };
-            #endregion
+            //Console.WriteLine("*********************");
+
+            // To imelement with for Each Should have [IEnumerable] interface.
+            // you don't have the fully control like for
+            // whan work that take copy from Orginal arr then make the iteration
+            // ( That internal work with three function => Current,..,.. )not sure
+            //foreach (int num in Numbers)
+            //{
+            //    Console.WriteLine(num);
+            //}
+
+
 
 
             #endregion
 
-            #endregion
 
             #endregion
-
 
 
         }
