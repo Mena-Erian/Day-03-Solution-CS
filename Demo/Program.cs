@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Demo
 {
@@ -301,7 +302,7 @@ namespace Demo
             //{
             //    Console.WriteLine(Numbers[i]);
             //}
-            
+
             //Console.WriteLine("*********************");
 
             // To imelement with for Each Should have [IEnumerable] interface.
@@ -316,6 +317,27 @@ namespace Demo
 
 
 
+            #endregion
+
+            #region [while, do..while]
+
+            //int evenNumber = int.Parse(Console.ReadLine() ?? "0");
+            ///int number; 
+            ///do
+            ///{
+            ///    Console.WriteLine("Please Enter an Event Number: ");
+            ///}
+            ///while (int.TryParse(Console.ReadLine(), out number)||number % 2 == 1  );
+
+            // use while if i don't know the iteration of looping
+            ///here use for it will to be more readabilte
+            ///int i = 0;
+            ///while (i<=10)
+            ///{
+            ///    Console.WriteLine(i);
+            ///    i++;
+            ///}
+            ///
             #endregion
 
 
