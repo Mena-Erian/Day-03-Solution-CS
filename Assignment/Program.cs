@@ -191,30 +191,51 @@ namespace Assignment
 
             #region 10.Get (Total,Avg,Percentage) Of Mark
 
-            int countOfSubjects = 5;
-            Console.Write($"- Enter Marks of {countOfSubjects} Subjects: ");
-            string[] arrayOfString = (Console.ReadLine() ?? "").Split(" ");
-            int[] numbers = new int[countOfSubjects];
-            int totalMark = 0;
-            float avg;
-            float percentage;
-            for (int i = 0; i < countOfSubjects; i++)
-            {
-                int.TryParse(arrayOfString[i], out numbers[i]);
-            }
+            //int countOfSubjects = 5;
+            //Console.Write($"- Enter Marks of {countOfSubjects} Subjects: ");
+            //string[] arrayOfString = (Console.ReadLine() ?? "").Split(" ");
+            //int[] numbers = new int[countOfSubjects];
+            //int totalMark = 0;
+            //float avg;
+            //float percentage;
+            //for (int i = 0; i < countOfSubjects; i++)
+            //{
+            //    int.TryParse(arrayOfString[i], out numbers[i]);
+            //}
 
-            foreach (int num in numbers)
-            {
-                totalMark = totalMark + num;
-            }
-            avg = totalMark / countOfSubjects;
-            percentage = ((float)totalMark / (countOfSubjects * 100)) * 100;
-            
-            Console.WriteLine($"Total Marks = {totalMark}");
-            Console.WriteLine($"Averages Marks = {avg}");
-            Console.WriteLine($"Percentage = {percentage}");
+            //foreach (int num in numbers)
+            //{
+            //    totalMark = totalMark + num;
+            //}
+            //avg = totalMark / countOfSubjects;
+            //percentage = ((float)totalMark / (countOfSubjects * 100)) * 100;
+
+            //Console.WriteLine($"Total Marks = {totalMark}");
+            //Console.WriteLine($"Averages Marks = {avg}");
+            //Console.WriteLine($"Percentage = {percentage}");
 
             #endregion
+
+            #region 11.Month Number 
+
+            //bool isParsed = false;
+            //bool inRang = false;
+            //int[] monthNumbers = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            //int num;
+            //do
+            //{
+            //    Console.Write($"Enter Month Number: ");
+            //    isParsed = int.TryParse(Console.ReadLine(), out num);
+            //    inRang = (num < 13 && num > 0);
+            //    if (!inRang)
+            //        Console.WriteLine("Your Input is Not Vaild Try Agian");
+            //}
+            //while (!isParsed || !inRang);
+
+            //Console.WriteLine($"Days in Month: {monthNumbers[num - 1]}");
+
+            #endregion
+
         }
     }
 }
