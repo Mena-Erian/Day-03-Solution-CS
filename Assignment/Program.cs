@@ -153,18 +153,39 @@ namespace Assignment
 
             #region 8.Even Numbers Between 1 To X
 
-            StringBuilder result = new StringBuilder(string.Empty);
+            //StringBuilder result = new StringBuilder(string.Empty);
 
-            Console.WriteLine("Enter Number");
-            int.TryParse(Console.ReadLine(), out int number);
+            //Console.WriteLine("Enter Number");
+            //int.TryParse(Console.ReadLine(), out int number);
 
-            for (int i = 2; i < number; i++)
+            //for (int i = 2; i < number; i++)
+            //{
+            //    if (i % 2 == 0)
+            //        result.Append($"{i} ");
+            //}
+
+            //Console.WriteLine(result.ToString());
+
+            #endregion
+
+            #region 9.Print The Power
+
+            Console.WriteLine("Enter 2 Number With Space like This '4 3'");
+            
+            string[] arrayOfString = (Console.ReadLine() ?? "").Split(" ");
+            int[] numbers = [0, 0];
+            int result = 1;
+            for (int i = 0; i < 2; i++)
             {
-                if (i % 2 == 0)
-                    result.Append($"{i} ");
+                int.TryParse(arrayOfString[i], out numbers[i]);
+            }
+            
+            for (int i = 0; i < numbers[1]; i++)
+            {
+                result = result * numbers[0];
             }
 
-            Console.WriteLine(result.ToString());
+            Console.WriteLine(result);
 
             #endregion
 
