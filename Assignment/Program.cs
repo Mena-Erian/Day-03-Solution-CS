@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Text;
 
 namespace Assignment
 {
@@ -134,7 +135,21 @@ namespace Assignment
 
             #endregion
 
-           
+            #region 7.Multiplication Tabel Up To 12
+
+            StringBuilder result = new StringBuilder(string.Empty);
+            
+            Console.WriteLine("Enter Number");
+            int.TryParse(Console.ReadLine(),out int number);
+
+            for (int i = 1; i <= 12; i++)
+            {
+                result.Append($"{number * i} ");
+            }
+          
+            Console.WriteLine(result.ToString());
+
+            #endregion
 
         }
     }
