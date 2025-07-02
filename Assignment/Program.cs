@@ -137,16 +137,33 @@ namespace Assignment
 
             #region 7.Multiplication Tabel Up To 12
 
-            StringBuilder result = new StringBuilder(string.Empty);
-            
-            Console.WriteLine("Enter Number");
-            int.TryParse(Console.ReadLine(),out int number);
+            //StringBuilder result = new StringBuilder(string.Empty);
 
-            for (int i = 1; i <= 12; i++)
+            //Console.WriteLine("Enter Number");
+            //int.TryParse(Console.ReadLine(),out int number);
+
+            //for (int i = 1; i <= 12; i++)
+            //{
+            //    result.Append($"{number * i} ");
+            //}
+
+            //Console.WriteLine(result.ToString());
+
+            #endregion
+
+            #region 8.Even Numbers Between 1 To X
+
+            StringBuilder result = new StringBuilder(string.Empty);
+
+            Console.WriteLine("Enter Number");
+            int.TryParse(Console.ReadLine(), out int number);
+
+            for (int i = 2; i < number; i++)
             {
-                result.Append($"{number * i} ");
+                if (i % 2 == 0)
+                    result.Append($"{i} ");
             }
-          
+
             Console.WriteLine(result.ToString());
 
             #endregion
