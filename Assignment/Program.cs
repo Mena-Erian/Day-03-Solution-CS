@@ -236,6 +236,35 @@ namespace Assignment
 
             #endregion
 
+            #region 12.Simple Calculater
+
+            //Console.Write("Enter Number 1: ");
+            //double.TryParse(Console.ReadLine(), out double num1);
+
+            //Console.Write("Enter Number 2: ");
+            //double.TryParse(Console.ReadLine(), out double num2);
+
+            //Console.Write("Enter the Operater + - * /: ");
+            //char.TryParse(Console.ReadLine(), out char operater);
+
+            //switch (operater) {
+            //    case '+':
+            //        Console.WriteLine($"Resulet Of {num1} {operater} {num2} is: {num1 + num2}");
+            //        break;                      
+            //    case '-':                       
+            //        Console.WriteLine($"Resulet Of {num1} {operater} {num2} is: {num1 - num2}");
+            //        break;                       
+            //    case '*':                        
+            //        Console.WriteLine($"Resulet Of {num1} {operater} {num2} is: {num1 * num2}");
+            //        break;                     
+            //    case '/':                      
+            //        Console.WriteLine($"Resulet Of {num1} {operater} {num2} is: {num1 / num2}");
+            //        break;
+            //}
+
+            #endregion
+
+
         }
     }
 }
