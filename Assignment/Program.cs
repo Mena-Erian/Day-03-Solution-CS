@@ -288,6 +288,87 @@ namespace Assignment
 
             #endregion
 
+            //Problem here--------------------------------\/
+            #region 15.find prime numbers within a range of numbers
+            // i dont't know :(
+
+            //Console.WriteLine("Test Data : ");
+            //Console.WriteLine("Input Starting Number Of Range : ");
+            //int.TryParse(Console.ReadLine(), out int startRange);
+            //Console.WriteLine("Input Ending Number Of Range : ");
+            //int.TryParse(Console.ReadLine(), out int endRange);
+
+            //StringBuilder sb = new StringBuilder(string.Empty);
+
+            //for (int i = (startRange >= 3 ? startRange : 3); i < endRange; i += 2)
+            //{
+
+            //}
+
+            //if (endRange > 2)
+            //{
+            //    Console.WriteLine("false");
+            //}
+            //else if (endRange == 2)
+            //{
+            //    Console.WriteLine("True");
+            //}
+            //else if (endRange % 2 == 0)
+            //{
+            //    Console.WriteLine("False");
+            //}
+            //else
+            //{
+
+            //}
+
+            #endregion
+            //Problem here--------------------------------/\
+
+            #region 16.Convert Decimal to Binary
+
+            #endregion
+
+            #region 17.Determine whether these points lie on a single straight line
+
+            //int[] point01 = [0, 0];
+            //int[] point02 = [0, 0];
+            //int[] point03 = [0, 0];
+
+            //Console.WriteLine("Please Enter Points of (X1,y1)");
+
+            //string[] arrOfStr = (Console.ReadLine() ?? "").Split(",");
+            //for (int i = 0; i < 2; i++)
+            //{
+            //    int.TryParse(arrOfStr[i], out point01[i]);
+            //}
+
+            //Console.WriteLine("Please Enter Points of (X2,y2)");
+            //arrOfStr = (Console.ReadLine() ?? "").Split(",");
+            //for (int i = 0; i < 2; i++)
+            //{
+            //    int.TryParse(arrOfStr[i], out point02[i]);
+            //}
+
+            //Console.WriteLine("Please Enter Points of (X3,y3)");
+            //arrOfStr = (Console.ReadLine() ?? "").Split(",");
+            //for (int i = 0; i < 2; i++)
+            //{
+            //    int.TryParse(arrOfStr[i], out point03[i]);
+            //}
+            ////slope = (y2 - y1) / (x2 - x1)
+            ////(point02[1]-point01[1]) / (point02[0]-point01[0])
+            //float slopeOfP1P2 = (point02[1] - point01[1]) / (point02[0] - point01[0]);
+            //float slopeOfP2P3 = (point03[1] - point02[1]) / (point03[0] - point02[0]);
+
+            //Console.WriteLine($"\n\nThe Slope Of Point 1 and 2 is {slopeOfP1P2}");
+            //Console.WriteLine($"The Slope Of Point 2 and 3 is {slopeOfP2P3}");
+
+            //if (slopeOfP1P2 == slopeOfP2P3) Console.WriteLine("\nSo it in a Single Straight Line");
+            //else Console.WriteLine("\nSo it is in Not on Single Straight Line");
+
+            #endregion
+
         }
     }
 }
