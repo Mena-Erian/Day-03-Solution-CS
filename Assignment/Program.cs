@@ -266,15 +266,28 @@ namespace Assignment
 
             #region 13.REVERESE String
 
-            //Console.WriteLine("Enter The String You Wand To Reverse");
-            //char[] charArray = (Console.ReadLine() ?? "").ToCharArray(); 
-            
+            //Console.WriteLine("Enter The String You Want To Reverse");
+            //char[] charArray = (Console.ReadLine() ?? "").ToCharArray();
+
             //Array.Reverse(charArray);
             //string stringReversed = new string(charArray);
-            
+
             //Console.WriteLine(stringReversed);
 
             #endregion
+
+            #region 14.REVERESE Integer
+
+            //Console.WriteLine("Enter The Integer You Want To Reverse");
+            //char[] charArray = (Console.ReadLine() ?? "").ToCharArray();
+
+            //Array.Reverse(charArray);
+            //string integerReveresed = new string(charArray);
+
+            //Console.WriteLine(integerReveresed);
+
+            #endregion
+
         }
     }
 }
