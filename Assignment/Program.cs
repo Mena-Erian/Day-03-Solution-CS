@@ -170,25 +170,51 @@ namespace Assignment
 
             #region 9.Print The Power
 
-            Console.WriteLine("Enter 2 Number With Space like This '4 3'");
-            
-            string[] arrayOfString = (Console.ReadLine() ?? "").Split(" ");
-            int[] numbers = [0, 0];
-            int result = 1;
-            for (int i = 0; i < 2; i++)
-            {
-                int.TryParse(arrayOfString[i], out numbers[i]);
-            }
-            
-            for (int i = 0; i < numbers[1]; i++)
-            {
-                result = result * numbers[0];
-            }
+            //Console.WriteLine("Enter 2 Number With Space like This '4 3'");
 
-            Console.WriteLine(result);
+            //string[] arrayOfString = (Console.ReadLine() ?? "").Split(" ");
+            //int[] numbers = [0, 0];
+            //int result = 1;
+            //for (int i = 0; i < 2; i++)
+            //{
+            //    int.TryParse(arrayOfString[i], out numbers[i]);
+            //}
+
+            //for (int i = 0; i < numbers[1]; i++)
+            //{
+            //    result = result * numbers[0];
+            //}
+
+            //Console.WriteLine(result);
 
             #endregion
 
+            #region 10.Get (Total,Avg,Percentage) Of Mark
+
+            int countOfSubjects = 5;
+            Console.Write($"- Enter Marks of {countOfSubjects} Subjects: ");
+            string[] arrayOfString = (Console.ReadLine() ?? "").Split(" ");
+            int[] numbers = new int[countOfSubjects];
+            int totalMark = 0;
+            float avg;
+            float percentage;
+            for (int i = 0; i < countOfSubjects; i++)
+            {
+                int.TryParse(arrayOfString[i], out numbers[i]);
+            }
+
+            foreach (int num in numbers)
+            {
+                totalMark = totalMark + num;
+            }
+            avg = totalMark / countOfSubjects;
+            percentage = ((float)totalMark / (countOfSubjects * 100)) * 100;
+            
+            Console.WriteLine($"Total Marks = {totalMark}");
+            Console.WriteLine($"Averages Marks = {avg}");
+            Console.WriteLine($"Percentage = {percentage}");
+
+            #endregion
         }
     }
 }
