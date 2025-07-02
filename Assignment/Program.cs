@@ -264,7 +264,17 @@ namespace Assignment
 
             #endregion
 
+            #region 13.REVERESE String
 
+            //Console.WriteLine("Enter The String You Wand To Reverse");
+            //char[] charArray = (Console.ReadLine() ?? "").ToCharArray(); 
+            
+            //Array.Reverse(charArray);
+            //string stringReversed = new string(charArray);
+            
+            //Console.WriteLine(stringReversed);
+
+            #endregion
         }
     }
 }
