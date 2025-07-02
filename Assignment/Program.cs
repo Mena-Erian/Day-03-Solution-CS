@@ -89,39 +89,52 @@ namespace Assignment
 
             #region 5.Vowel | Consonant
 
-            char[] vowelCharacters = { 'a', 'e', 'i', 'o', 'u' };
-            char character;
-            bool isParsed = false;
-            bool isVowelChar = false;
-            //Get Character
-            do
-            {
-                Console.WriteLine("Enter One Character: ");
-                isParsed = char.TryParse(Console.ReadLine(), out character);
-                if (!isParsed)
-                    Console.WriteLine("Your Char Not Valid Please Try Again");
-            }   //Check is Vaild Or Not
-            while ( !isParsed || char.IsDigit(character) );
-            
-            //Check is Vowel
-            for (int i = 0; i < vowelCharacters.Length; i++)
-            {
-                if (vowelCharacters[i] == character) isVowelChar = true;
-            }
-            
-            //Output
-            switch (isVowelChar)
-            {
-                case true:
-                    Console.WriteLine("Vowel");
-                    break;
-                case false:
-                    Console.WriteLine("Consonant");
-                    break;
-            }
+            ///char[] vowelCharacters = { 'a', 'e', 'i', 'o', 'u' };
+            ///char character;
+            ///bool isParsed = false;
+            ///bool isVowelChar = false;
+            /////Get Character
+            ///do
+            ///{
+            ///    Console.WriteLine("Enter One Character: ");
+            ///    isParsed = char.TryParse(Console.ReadLine(), out character);
+            ///    if (!isParsed)
+            ///        Console.WriteLine("Your Char Not Valid Please Try Again");
+            ///}   //Check is Vaild Or Not
+            ///while (!isParsed || char.IsDigit(character));
+            ///
+            /////Check is Vowel
+            ///for (int i = 0; i < vowelCharacters.Length; i++)
+            ///{
+            ///    if (vowelCharacters[i] == character) isVowelChar = true;
+            ///}
+            ///
+            /////Output
+            ///switch (isVowelChar)
+            ///{
+            ///    case true:
+            ///        Console.WriteLine("Vowel");
+            ///        break;
+            ///    case false:
+            ///        Console.WriteLine("Consonant");
+            ///        break;
+            ///}
 
             #endregion
 
+            #region 6.Print From 1 to X
+
+            ///Console.WriteLine("Enter Number");
+            ///int.TryParse(Console.ReadLine(),out int number);
+            ///
+            ///for (int i = 0; i < number; i++)
+            ///{
+            ///    Console.WriteLine(i + 1);
+            ///}
+
+            #endregion
+
+           
 
         }
     }
